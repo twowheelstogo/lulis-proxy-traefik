@@ -18,6 +18,7 @@ services:
       - "traefik.http.routers.web-secure.service=web"
       - "traefik.http.services.web.loadbalancer.server.port=4000"
       - "traefik.docker.network=web"
+      - "traefik.http.routers.web-secure.tls.certresolver=le"
 
     networks:
       web:

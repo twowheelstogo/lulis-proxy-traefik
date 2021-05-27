@@ -18,6 +18,7 @@ services:
       - "traefik.http.routers.identity-secure.service=identity"
       - "traefik.http.services.identity.loadbalancer.server.port=4100"
       - "traefik.docker.network=web"
+      - "traefik.http.routers.identity-secure.tls.certresolver=le"
 
     networks:
       web:

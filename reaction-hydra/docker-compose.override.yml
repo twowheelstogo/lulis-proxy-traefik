@@ -18,6 +18,7 @@ services:
       - "traefik.http.routers.hydra-secure.service=hydra"
       - "traefik.http.services.hydra.loadbalancer.server.port=4444"
       - "traefik.docker.network=web"
+      - "traefik.http.routers.hydra-secure.tls.certresolver=le"
     networks:
       web:
   hydra-migrate:
