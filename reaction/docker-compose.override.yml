@@ -19,6 +19,8 @@ services:
       - "traefik.http.services.api.loadbalancer.server.port=3000"
       - "traefik.docker.network=web"
       - "traefik.http.routers.api-secure.tls.certresolver=le"
+      - "traefik.http.routers.api-secure.tls.domains[0].main=example.com"
+      - "traefik.http.routers.api-secure.tls.domains[0].sans=*.example.com"
     networks:
       web:
   mongo:
