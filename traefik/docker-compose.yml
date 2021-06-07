@@ -16,7 +16,11 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      - DO_AUTH_TOKEN=YOUR_DIGITALOCEAN_AUTH_TOKEN
+    environment:
+      #- GCE_PROJECT=twowheelstogo-572d7
+      - GCE_SERVICE_ACCOUNT_FILE=google-key.json
+      #- GCE_SERVICE_ACCOUNT=traefik-ecommerce@twowheelstogo-572d7.iam.gserviceaccount.com
+      - GOOGLE_APPLICATION_CREDENTIALS=google-key.json
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
