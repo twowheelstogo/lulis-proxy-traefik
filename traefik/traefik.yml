@@ -19,9 +19,11 @@ certificatesResolvers:
   le:
     acme:
       # caServer: https://acme-staging-v02.api.letsencrypt.org/directory
-      email: YOUR_EMAIL
+      email: luiscelano@twowheelstogo.com
       storage: acme.json
-      tlschallenge: true
-      # dnsChallenge:
-      #   provider: digitalocean
-      #   delayBeforeCheck: 0
+      tlschallenge: {}
+      httpChallenge:
+        entryPoint: http
+      dnsChallenge:
+        provider: gcloud
+        delayBeforeCheck: 0
