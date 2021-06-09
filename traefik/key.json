@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "twowheelstogo-572d7",
+  "private_key_id": "78ec7bbff4bff09dde33a33550b573a11390335f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCk++rp2MxGAXgX\nuxVMlUTOHEB/AYAWOidz82H8sXkkiQaeEwVQZGyO7ewWSqfGJOOln9kLhp3QUWjv\nuejj23/JQYivfjyvbfif7xKUp0Mjky6hyOiSE8IKAJoIyjQqnTTNX9np0OgKxmqX\nW9ZzrO1Kd1kRWN/BKIczep8s4xtdOU/GnHNmhmotgNGj2rjOQEv7heva8R15krPm\nsfn9qd4DRF09VBNmpRdYWd/o3RROnrvvuyUbHA78HvCb9FBjvlFZQLfWvYYaqPAB\ng2f9qewnrS41cDKq+UQhUt7hURdkIzqOsmW9er9L0Wo89nQCd3QAcQV7Idiey2uc\nZMVL9aINAgMBAAECggEANtIQajikE8TsMzJybtqQnM4NbkZA2eHj9ybRkeYkw0uW\nu9LFKsPbwJh1IKkY24GpdQDK3YYTDUPn0vRa2s+2Q9j3Qpz3LDGl8fq+GVAEwp7m\n2VJJWTSgfrNZe38420oWYAGwBn3ohKAOjhGxjglRZbOHkHiQDP5bAnOFzaP/FTfr\ndSGyAcXmO8cyXk79c/pvwVrk4JIU8cb6zE4la36QOmSPVDlH3L/hARminO80V5Qp\n4Af1Hnwug3Q4n+WEbsavvRd4zKVEOKhhsVyVymCqJOfmL9e0ACSTnOtOlFbq97om\niPxRI934v2bg1orh1IQX44NxdGnS2lUgT1uPGHN5LwKBgQDec308rFFPG/k4iVri\nphQcQYAK1oKcAcuCUMz5Om1Uz49Ujduvb19iORXdMcSYpeRmwe++LRs9shfkOiHK\nkUdHD8MZfJuRje6luDZ9afPNn4Xn5wFKg3S+Lpy3IzxDlUpGVyaTx6NKisqc+z5S\nlOo2O9PLscflo9KH+UjtejExzwKBgQC93bWLkz51F503Ge5NeoRwtxIMozk3b/wi\nkGxBsC+4Mj79zVcn5jq8gsnfDZ7TMf0JH1xC1A376gDjLTsswDx6gSznkleZOEjd\nvgO6lZxJIM1G7raGZR98LdgYH4rzq50ttoQu7EbnzzbeTzZaoH8Qnl/iZssc9t6k\nicJJuJ1xYwKBgQDOc1Kct7Qyfly6+sctqELrwmJqLJFE5mmQRRsmhvInDwcPyyRC\n2lMk3qQLCIBTx0qFj6HH1yb8CEgiGU15KYGEUv2XrszWtmnwxVlU5btOb6mgAwVw\nuTXkt2/ci8gHVQt84q874cELkmnebVJ25BvGP5od5p4F4xel+FaVh50WgwKBgQC2\nsKKDDsdGO9aWsmjOPFk7a6v+ZQAlC6f8SiMggbso7ZAW/oIibjGOOfqsmZp9dNgY\n8wf/dbOO9fasoVUTFlYbOjhPCk0nrTTPyIol+tdKtjlPS1ptrtfA0QvhCljVZgfz\neG9wBwGjA4u0FVwjj9Mz1nBElMxTrmdEwxkjfnRgKQKBgHowsrannHTrowCY0A6Q\nyhBYF627QjcVqbYrUnkhLcbmBFkjvGkYOeVMH89aWk8QrFXC5CCsg+flnSy/5H00\nhWVBLDah7TTw+sU0uVhabtZ6t8EvA7w4soL0LmNMgQ/rnUCMAHFaW1WUsfRYtoP7\n/b+M9Os0cZcjHmQorZHM4zQ2\n-----END PRIVATE KEY-----\n",
+  "client_email": "traefik-ecommerce@twowheelstogo-572d7.iam.gserviceaccount.com",
+  "client_id": "104786120382834623452",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/traefik-ecommerce%40twowheelstogo-572d7.iam.gserviceaccount.com"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "service_account",
+  "project_id": "twowheelstogo-572d7",
+  "private_key_id": "a88afa6ef414b1715c48e09bce9e81fc4f0f09a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCMbHPCCFcbkzW0\nNK7j+PsHl1CklWrs5dd7aIz74yJ6tk6pJ1brFDLmzzmUq7oa5JFwzgXc5wQs1JeB\nW/iw/0ajufFuhfuvl06k7FqoaWqCRZJrIZi9ZsPddjYjLqHq4FJ/NrERc>  "client_email": "traefik-ecommerce@twowheelstogo-572d7.iam.gserviceaccount.com",
+  "client_id": "104786120382834623452",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/traefik-ecommerce%40twowheelstogo-572d7.iam.gserviceaccount.com"
+}

@@ -1,0 +1,23 @@
+{
+  "le": {
+    "Account": {
+      "Email": "luiscelano@twowheelstogo.com",
+      "Registration": {
+        "body": {
+          "status": "valid",
+          "contact": [
+            "mailto:luiscelano@twowheelstogo.com"
+          ]
+        },
+        "uri": "https://acme-v02.api.letsencrypt.org/acme/acct/126541679"
+      },
+      "PrivateKey": "MIIJKgIBAAKCAgEA+l/nf/mKM/KbxWE+TRUalhfD0fVnKuStIcVZS0e2Q2p9IUQYXnqOcKVbFwVihX3uoJKQERwW4JmdAHfPfHs4u4ElxTid2xvg/JhLYlr0UG5jwxQdPa6opD7qpE47kpdBZ/h7kSR3zzdG5+mLZuUzCqj2b5>
+      "KeyType": "4096"
+    },
+    "Certificates": null
+  }
+}
+
+
+
+
