@@ -1,4 +1,4 @@
-# Deploy the Reaction Platform on Digital Ocean
+# Deploy the Reaction Platform on Google Cloud Platform
 
 ### Overview
 
@@ -17,14 +17,13 @@ This deployment guide's purpose is to provide a simple and easy guide on how to 
     - [Set Ansible Environment Variables](#set-ansible-environment-variables)
     - [Execute the Playbook](#execute-the-playbook)
     - [Create the Primary Shop](#create-the-primary-shop)
-- [Video Tutorial](#video-tutorial)
 - [Command Cheatsheet](#command-cheatsheet)
 
 ### Requirements
 
-- A Linux host with at least 2GB of RAM, this guide uses a DigitalOcean droplet
+- A Linux host with at least 2GB of RAM, this guide uses a GCP droplet
 - A registered domain
-- A DNS manager that supports Certification Authority Authorization (CCA) records, such as Digital Ocean
+- A DNS manager that supports Certification Authority Authorization (CCA) records, such as Google Cloud Platform
 - Docker
 - Docker Compose
 - Git
@@ -68,10 +67,10 @@ This guide will use the following sub-domains, where `example.com` will need to 
 | identity.example.com   | The Reaction Identity service         |
 | traefik.example.com    | Traefik's admin UI                    |
 
-Each of your domains will need an `A` DNS record that resolves to your host's IP. It's recommend to use DigitalOcean's free [DNS manager](https://www.digitalocean.com/docs/networking/dns/overview/). Further, in order to obtain SSL certificates for your sub-domains, you will need a DNS manager that supports [CAA](https://support.dnsimple.com/articles/caa-record/) records.
+Each of your domains will need an `A` DNS record that resolves to your host's IP. It's recommend to use GCP's [Cloud DNS](https://www.google.com/aclk?sa=l&ai=DChcSEwjD8_uAuePyAhWGh8gKHUuDDToYABAAGgJxdQ&sig=AOD64_3wZqnjfdpUkrIg7Nb65Qyl_4ykmw&q&adurl&ved=2ahUKEwj-v_OAuePyAhXqRTABHVMlA8AQ0Qx6BAgCEAE). Further, in order to obtain SSL certificates for your sub-domains, you will need a DNS manager that supports [CAA](https://support.dnsimple.com/articles/caa-record/) records.
 
 
-Further, you will need a [DigitalOcean Auth token](https://docs.digitalocean.com/reference/api/create-personal-access-token/) to generate CAA records for your sub-domains.
+Further, you will need a [GCP Service Account](https://cloud.google.com/iam/docs/creating-managing-service-accounts) to generate CAA records for your sub-domains.
 
 
 # Automated Server Configuration
@@ -80,9 +79,9 @@ In order to expedite the installation of server dependencies, Ansible will be us
 
 ###### Prepare the Remote Host
 
-In this guide a DigitalOcean node will be used to host the Reaction Platform. If you don't yet have an account, create one at [digitalocean.com](https://digitalocean.com). Once you are signed into your account, create a new droplet using the Ubuntu 18.4 image with at least 2GB of RAM. Enable DigitalOcean's [free firewall](https://www.digitalocean.com/docs/networking/firewalls/) and add inbound rules for SSH, HTTP, HTTPS and add your droplet to the firewall.
+In this guide a GCP node will be used to host the Reaction Platform. If you don't yet have an account, create one at [cloud.google.com](https://cloud.google.com). Once you are signed into your account, create a new droplet using the Ubuntu 18.4 image with at least 2GB of RAM. Enable GCP's [VPC Firewall](https://cloud.google.com/vpc/docs/firewalls) and add inbound rules for SSH, HTTP, HTTPS and add your droplet to the firewall.
 
-After the droplet is created either select an existing SSH key to login or click on the "New SSH Key" under the authentication section  and copy your public SSH key from your local computer.
+After the droplet is created either select an existing SSH key to login or add a new SSH KEY into your [Compute Engine](https://cloud.google.com/compute) instance, copy your public SSH key from your local computer.
 
 Copy the newly created IP address and verify that you can login into the new server by executing:
 
@@ -126,7 +125,7 @@ Edit your hosts file
 sudo vim /etc/hosts
 ```
 
-and add an entry for the DigitalOcean droplet,
+and add an entry for the GCP droplet,
 
 ```
 XXX.XXX.XXX.XXX reaction.server
@@ -155,7 +154,7 @@ that need to be updated and a description of each.
 
 | Variable               | Description                                                                 |
 | ---------------------- | ----------------------------------------------------------------------------|
-| do_auth_token          | The Authentication token for the Digital Ocean API                          |
+| do_auth_token          | The Authentication token for the Google Cloud Platform API                          |
 | email                  | An email address to receive SSl certificate notifications                   |
 | domain                 | Your registered domain                                                      |
 
@@ -183,10 +182,6 @@ https://admin.example.com
 Upon navigating to the Reaction Admin interface, you will be presented with a login form, it will be necessary to create a user first, so click on the "Register" link and fill out the form. Once logged in, proceed to create a shop in the admin interface.
 
 Further, the `GraphQL API` explorer will be available at `https://api.example.com/graphql`.
-
-### Video Tutorial
-
-[![Deploy the Reaction Platform on DigitalOcean](docs/img/splash.png)](http://www.youtube.com/watch?v=7g5LfEVLt1U "Deploy the Reaction Platform on DigitalOcean")
 
 ### Command Cheatsheet
 
