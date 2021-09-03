@@ -1,0 +1,29 @@
+api:
+  dashboard: true
+
+entryPoints:
+  http:
+    address: ":80"
+  https:
+    address: ":443"
+
+providers:
+  providersThrottleDuration: 2s
+  docker:
+    watch: true
+    exposedByDefault: false
+
+log: {}
+
+certificatesResolvers:
+  le:
+    acme:
+      # caServer: https://acme-staging-v02.api.letsencrypt.org/directory
+      email: luiscelano@twowheelstogo.com
+      storage: acme.json
+      tlschallenge: {}
+      httpChallenge:
+        entryPoint: http
+      dnsChallenge:
+        provider: gcloud
+        delayBeforeCheck: 0

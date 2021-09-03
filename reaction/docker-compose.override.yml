@@ -1,0 +1,29 @@
+version: '3.4'
+
+networks:
+  web:
+    external:
+      name: web
+services:
+  api:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.api.entrypoints=http"
+      - "traefik.http.routers.api.rule=Host(`api.example.com`)"
+      - "traefik.http.middlewares.api-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.api.middlewares=api-https-redirect"
+      - "traefik.http.routers.api-secure.entrypoints=https"
+      - "traefik.http.routers.api-secure.rule=Host(`api.example.com`)"
+      - "traefik.http.routers.api-secure.tls=true"
+      - "traefik.http.routers.api-secure.service=api"
+      - "traefik.http.services.api.loadbalancer.server.port=3000"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.api-secure.tls.certresolver=le"
+      - "traefik.http.routers.api-secure.tls.domains[0].main=example.com"
+      - "traefik.http.routers.api-secure.tls.domains[0].sans=*.example.com"
+    networks:
+      web:
+  mongo:
+    labels:
+      - "traefik.enable=false"
+
